@@ -1,8 +1,14 @@
 import { } from 'react'
+import { Box } from '@mui/material';
+import HeroComplaint from '../Components/Complaint/HeroComplaint';
+import ComplaintForm from '../Components/Complaint/ComplaintForm';
 
 const Complaint = () => {
   return (
-    <div>Complaint</div>
+    <Box className="bg-[#B2A59B]">
+      <HeroComplaint />
+      <ComplaintForm />
+    </Box>
   )
 }
 
