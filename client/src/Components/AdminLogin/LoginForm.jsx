@@ -2,7 +2,7 @@ import {} from "react";
 
 const Login = () => {
   return (
-    <section className="pb-44 flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 pt-10 my-2 mx-5 md:mx-0 md:my-0">
+    <section className="pb-44 flex flex-col md:flex-row justify-center sm:justify-center space-y-10 md:space-y-0 md:space-x-16 pt-10 py-2 mx-5">
       <div className="md:w-1/2 max-w-lg">
         <img
           src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
