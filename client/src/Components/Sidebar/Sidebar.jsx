@@ -34,7 +34,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <Card
-        className={`h-full rounded-lg mt-24 md:h-[calc(100vh-2rem)] bg-[#B2A59B] w-64 p-4 shadow-xl shadow-blue-gray-900/5 fixed top-0 left-0 transform transition-transform duration-300 ease-in-out ${
+        className={`h-full  rounded-lg pt-24 md:h-[calc(100vh-2rem)] bg-[#B2A59B] w-64 p-4 shadow-xl shadow-blue-gray-900/5 top-0 left-0 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0 md:relative md:top-auto md:left-auto`}
       >
