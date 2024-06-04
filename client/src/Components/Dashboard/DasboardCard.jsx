@@ -13,10 +13,20 @@ const DashboardCard = () => {
         data: [30, 20, 50, 40, 70, 60],
         borderColor: 'rgba(75,192,192,1)',
         backgroundColor: 'rgba(75,192,192,0.2)',
+        fill: true,
       },
     ],
   };
-  return <Line data={data} />;
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+
+  return (
+    <div className="relative w-full h-64 lg:h-96">
+      <Line data={data} options={options} />
+    </div>
+  );
 };
 
 
