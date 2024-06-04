@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    title: "First Blog Post",
+    title: "New York",
     description: "This is the description of the first blog post.",
     blogimage: "https://via.placeholder.com/300",
     subtitle1: "Subtitle 1",

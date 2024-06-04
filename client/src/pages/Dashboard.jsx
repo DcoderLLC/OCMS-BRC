@@ -1,42 +1,46 @@
-import { useState } from 'react';
-import { Box } from '@mui/material';
-import Sidebar from '../Components/Sidebar/Sidebar'
-import CountupCards from '../Components/Dashboard/CountupCards'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
+import {} from "react";
+import Sidebar from "../Components/Sidebar/Sidebar";
+import DonutChart from "../Components/Dashboard/DonutChart";
+import DataTable from "../Components/Dashboard/DataTable";
+import { FaUsers, FaChartLine } from "react-icons/fa";
+import DashboardCard from "./../Components/Dashboard/DasboardCard";
+import CountupCards from "./../Components/Dashboard/CountupCards";
 
 const Dashboard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <Box className="relative flex">
-      {/* Toggle Button for Small Screens */}
-      <button
-        className="md:hidden fixed top-4 left-4 z-50 p-2 mt-14 bg-gray-800 text-white rounded-full focus:outline-none"
-        onClick={toggleSidebar}
-      >
-        {isOpen ? <XMarkIcon className="h-6 w-6" /> : <Bars3Icon className="h-6 w-6" />}
-      </button>
-
-      {/* Sidebar */}
-      <Sidebar isOpen={isOpen} toggleSidebar={toggleSidebar} />
-
-      {/* Overlay to close sidebar on small screens */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 z-40 md:hidden"
-          onClick={toggleSidebar}
-        ></div>
-      )}
-
-      {/* Main Content */}
-      <Box className="flex-grow p-4 md:ml-64">
-        <CountupCards />
-      </Box>
-    </Box>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 ml-64">
+        <div className="pt-16">
+          <div className="p-4 space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <CountupCards title="Users" count={1500} icon={FaUsers} />
+              <CountupCards title="Revenue" count={75000} icon={FaChartLine} />
+              <CountupCards title="Revenue" count={75000} icon={FaChartLine} />
+              <CountupCards title="Revenue" count={75000} icon={FaChartLine} />
+            </div>
+          </div>
+          <div className="p-4">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="bg-white p-4 shadow rounded-lg">
+                <h2 className="text-lg font-semibold mb-4">Sales Over Time</h2>
+                <DashboardCard />
+              </div>
+              <div className="bg-white p-4 shadow rounded-lg">
+                <h2 className="text-lg font-semibold mb-4">Distribution</h2>
+                <DonutChart />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="p-4">
+          <div className="bg-white p-4 shadow rounded-lg">
+            <h2 className="text-lg font-semibold mb-4">Data Table</h2>
+            <DataTable />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
