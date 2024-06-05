@@ -1,8 +1,14 @@
 import { } from 'react'
+import { Box } from '@mui/system'
+import TermsHero from '../Components/Terms/TermsHero'
+import TermDetails from '../Components/Terms/TermDetails'
 
 const Terms = () => {
   return (
-    <div>Terms</div>
+    <Box>
+      <TermsHero />
+      <TermDetails />
+    </Box>
   )
 }
 

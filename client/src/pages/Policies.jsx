@@ -1,8 +1,14 @@
+import { Box } from '@mui/system'
 import {} from 'react'
+import PoliciesHero from '../Components/Policies/PoliciesHero'
+import PoliciesData from '../Components/Policies/PoliciesData'
 
 const Policies = () => {
   return (
-    <div>Policies</div>
+    <Box>
+      <PoliciesHero />
+      <PoliciesData />
+    </Box>
   )
 }
 
