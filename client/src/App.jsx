@@ -8,11 +8,12 @@ import Footer from "./Components/Footer/Footer";
 import AdminLogin from "./pages/AdminLogin";
 import Complaint from './pages/Complaint';
 import Dashboard from './pages/Dashboard';
-import Stats from './pages/Stats';
+import Table from './pages/Table';
 import Policies from './pages/Policies';
 import Terms from './pages/Terms';
 import PageNotFound from "./pages/PageNotFound";
-// import Sidebar from "./Components/Sidebar/Sidebar";
+import Charts from "./pages/Charts";
+
 
 function App() {
   return (
@@ -24,9 +25,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/admin" element={<AdminLogin />} />
           <Route path="/complaints" element={<Complaint />} />
-          {/* <Route path="/Sidebar" element={<Sidebar />} /> */}
-          <Route path="/Dashboard" element={<Dashboard />} />
-          <Route path="/stats" element={<Stats />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard/charts" element={<Charts />} />
+          <Route path="/dashboard/table" element={<Table />} />
           <Route path='/Policies' element={<Policies />} />
           <Route path="/t&c" element={<Terms />} />
           <Route path="*" element={<PageNotFound />} />
