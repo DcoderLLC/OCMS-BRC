@@ -1,10 +1,10 @@
-import { } from 'react';
-import CountUp from 'react-countup';
-import PropType from "prop-types"
+import {} from "react";
+import CountUp from "react-countup";
+import PropType from "prop-types";
 
 const CountupCards = ({ title, count, icon: Icon }) => {
   return (
-    <div className="bg-white p-4 shadow rounded-lg flex items-center">
+    <div className="bg-white p-4 shadow rounded-lg flex items-center w-full">
       <div className="p-3 bg-blue-500 rounded-full text-white">
         <Icon size={24} />
       </div>
@@ -22,6 +22,6 @@ CountupCards.propTypes = {
   title: PropType.string.isRequired,
   count: PropType.number.isRequired,
   icon: PropType.elementType.isRequired,
-}
+};
 
 export default CountupCards;

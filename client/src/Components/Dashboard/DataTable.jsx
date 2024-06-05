@@ -1,10 +1,20 @@
-import {} from 'react';
-import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody, Paper } from '@mui/material';
+import {} from "react";
+import {
+  TableContainer,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody,
+  Paper,
+} from "@mui/material";
 
 const DataTable = () => {
   const rows = [
-    { id: 1, location: 'New York', type: 'Office', votes: 120 },
-    { id: 2, location: 'Los Angeles', type: 'Warehouse', votes: 80 },
+    { id: 1, location: "New York", type: "Office", votes: 120 },
+    { id: 2, location: "Los Angeles", type: "Warehouse", votes: 80 },
+    { id: 2, location: "Los Angeles", type: "Warehouse", votes: 80 },
+    { id: 2, location: "Los Angeles", type: "Warehouse", votes: 80 },
     // Add more rows as needed
   ];
 

@@ -10,7 +10,7 @@ const Dashboard = () => {
   return (
     <div className="flex">
       <Sidebar />
-      <div className="flex-1 ml-64">
+      <div className="flex-1 relative m-8">
         <div className="pt-16">
           <div className="p-4 space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
